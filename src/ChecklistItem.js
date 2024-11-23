@@ -3,12 +3,11 @@ import './ChecklistItem.css'
 
 const ChecklistItem = ({ id, label, checked, onToggle }) => {
   return (
-    <div className="checklist-item">
+    <div className="checklist-item" onClick={() => onToggle(id)}>
       <input
         type="checkbox"
         id={id}
         checked={checked}
-        onChange={() => onToggle(id)}
         className="checkbox"
       />
       <label htmlFor={id} className="label">
