@@ -5,7 +5,7 @@ import Checklist from "./CheckList";
 const App = () => {
   return (
     <div>
-      <h1  style={{display:'flex', alignSelf:'center'}}>Study Nest Use Case Checklist</h1>
+      <h1  style={{display:'flex', alignSelf:'center', justifyContent:'center'}}>Study Nest Use Case Checklist</h1>
       <Checklist/>
     </div>
   );
