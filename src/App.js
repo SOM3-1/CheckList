@@ -51,7 +51,7 @@ const App = () => {
     };
 
     return (
-        <div>
+        <div className="main">
             {showChecklist ? (
                 <CheckList
                     title={title}

@@ -12,7 +12,7 @@ export const CheckList = ({ title, useCases, onDelete, onUpdate }) => {
     const [checkedStates, setCheckedStates] = useState(
         useCases.map(() => false)
     );
-    const [strikeThroughEnabled, setStrikeThroughEnabled] = useState(false); 
+    const [strikeThroughEnabled, setStrikeThroughEnabled] = useState(false);
 
     const [openEdit, setOpenEdit] = useState(false);
     const [openDelete, setOpenDelete] = useState(false);
@@ -90,7 +90,7 @@ export const CheckList = ({ title, useCases, onDelete, onUpdate }) => {
 
     return (
         <>
-            <h1 className="title"  style={{ textTransform: capitalizeEnabled ? "uppercase" : upperCaseEnabled ? 'capitalize' : 'none',}}>{title}</h1>
+            <h1 className="title" style={{ textTransform: capitalizeEnabled ? "uppercase" : upperCaseEnabled ? 'capitalize' : 'none', }}>{title}</h1>
             <div className="checklist">
                 {useCases.map((useCase, index) => (
                     <ChecklistItem
@@ -108,33 +108,31 @@ export const CheckList = ({ title, useCases, onDelete, onUpdate }) => {
 
             {/* Action Buttons */}
             <div className="action-buttons">
-        <AiFillEdit
-            style={{
-                cursor: "pointer",
-                marginRight: "20px",
-                fontSize: "24px",
-                color: "#1976d2",
-            }}
-            onClick={() => setOpenEdit(true)}
-        />
-        <AiFillDelete
-            style={{
-                cursor: "pointer",
-                marginRight: "20px",
-                fontSize: "24px",
-                color: "red",
-            }}
-            onClick={() => setOpenDelete(true)}
-        />
-        <AiOutlineSetting
-            style={{
-                cursor: "pointer",
-                fontSize: "24px",
-                color: "grey",
-            }}
-            onClick={() => setOpenSettings(true)}
-        />
-</div>
+                <AiFillEdit
+                    style={{
+                        cursor: "pointer",
+                        fontSize: "24px",
+                        color: "#1976d2",
+                    }}
+                    onClick={() => setOpenEdit(true)}
+                />
+                <AiFillDelete
+                    style={{
+                        cursor: "pointer",
+                        fontSize: "24px",
+                        color: "red",
+                    }}
+                    onClick={() => setOpenDelete(true)}
+                />
+                <AiOutlineSetting
+                    style={{
+                        cursor: "pointer",
+                        fontSize: "24px",
+                        color: "grey",
+                    }}
+                    onClick={() => setOpenSettings(true)}
+                />
+            </div>
 
             {/* Edit Modal */}
             <EditChecklistModal

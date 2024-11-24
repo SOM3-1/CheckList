@@ -8,6 +8,10 @@
   gap: 4px;
   display: flex;
   flex-direction: column;
+  max-height: calc(100% - 50px);
+  overflow-y: scroll;
+  scrollbar-width: thin; 
+  scrollbar-color: #ccc transparent; 
 }
 
 .checklist h2 {
@@ -32,9 +36,10 @@
   bottom: 40px;
   right: 30px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 /* Modal heading styles */
