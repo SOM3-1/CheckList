@@ -1,32 +1,50 @@
+/* ChecklistItem.css */
+
+/* Parent container */
 .checklist-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    user-select: none;
-    cursor: pointer;
-  }
-  .checklist-item:hover {
-    background-color: #f0f0f0; /* Highlight on hover */
-  }
-  
-  .checkbox {
-    margin-right: 15px;
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-  
-  .label {
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .checklist-item:hover {
-    background-color: #e6f7ff;
-  }
-  
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.checklist-item:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Checked state */
+.checklist-item.checked {
+  background-color: #e6f7e6;
+  border-color: #a5d6a7;
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label */
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  flex-grow: 1;
+}
+
+/* Checked label */
+.checklist-item.checked .label {
+  color: #2e7d32;
+  /* text-decoration: line-through; */
+}

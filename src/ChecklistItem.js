@@ -1,27 +1,19 @@
 import React from "react";
 import './ChecklistItem.css';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
 const ChecklistItem = ({ id, label, checked, onToggle }) => {
-  const handleToggle = (e) => {
-    // Prevent double-toggling from checkbox or label clicks
-    if (e.target.tagName !== 'INPUT') {
-      e.preventDefault(); // Prevent default behavior from label
-      onToggle(id);
-    }
-  };
-
   return (
-    <div className="checklist-item" onClick={handleToggle}>
-      <input
-        type="checkbox"
-        id={id}
-        checked={checked}
-        className="checkbox"
-        onChange={() => onToggle(id)} // Ensure checkbox toggles on its own
-      />
-      <label htmlFor={id} className="label">
-        {label}
-      </label>
+    <div className={`checklist-item ${checked ? 'checked' : ''}`} onClick={() => onToggle(id)}>
+      <div className="icon">
+        {checked ? (
+          <CheckCircleIcon style={{ color: "#4caf50", fontSize: "24px" }} />
+        ) : (
+          <RadioButtonUncheckedIcon style={{ color: "#bdbdbd", fontSize: "24px" }} />
+        )}
+      </div>
+      <label className="label">{label}</label>
     </div>
   );
 };
