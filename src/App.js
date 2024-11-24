@@ -1,14 +1,65 @@
-import React from "react";
-import "./App.css"; // Add global styles if necessary
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import TitleInputPage from "./TitleInputPage";
 import Checklist from "./CheckList";
 
 const App = () => {
-  return (
-    <div>
-      <h1  style={{display:'flex', alignSelf:'center', justifyContent:'center'}}>Study Nest Use Case Checklist</h1>
-      <Checklist/>
-    </div>
-  );
+    const [showChecklist, setShowChecklist] = useState(false);
+    const [useCases, setUseCases] = useState([]);
+    const [title, setTitle] = useState("");
+
+    useEffect(() => {
+        const savedTitle = localStorage.getItem("title");
+        const savedUseCases = JSON.parse(localStorage.getItem("useCases"));
+        const savedShowChecklist = JSON.parse(localStorage.getItem("showChecklist"));
+
+        if (savedTitle && savedUseCases) {
+            setTitle(savedTitle);
+            setUseCases(savedUseCases);
+            setShowChecklist(savedShowChecklist);
+        }
+    }, []);
+
+    const handleProceed = (title, useCaseNames) => {
+        const useCaseArray = useCaseNames.split(",").map((name, index) => ({
+            id: `UC${index + 1}`,
+            name: name.trim(),
+        }));
+
+        setUseCases(useCaseArray);
+        setTitle(title);
+        setShowChecklist(true);
+
+        localStorage.setItem("title", title);
+        localStorage.setItem("useCases", JSON.stringify(useCaseArray));
+        localStorage.setItem("showChecklist", true);
+    };
+
+    const handleDelete = () => {
+        setTitle("");
+        setUseCases([]);
+        setShowChecklist(false);
+    };
+
+    const handleUpdate = (updatedTitle, updatedUseCases) => {
+        setTitle(updatedTitle);
+        setUseCases(updatedUseCases);
+    };
+
+    return (
+        <div>
+            {showChecklist ? (
+                <Checklist
+                    title={title}
+                    useCases={useCases}
+                    onDelete={handleDelete}
+                    onUpdate={handleUpdate}
+                />
+            ) : (
+                <TitleInputPage onProceed={handleProceed} />
+            )}
+        </div>
+    );
 };
 
 export default App;

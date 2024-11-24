@@ -1,19 +1,70 @@
 .checklist {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    gap: 4px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .checklist h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.checklist h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-top:  10px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.action-buttons {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal heading styles */
+.settings-modal h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Settings option container */
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Settings label styling */
+.settings-option label {
+  font-size: 16px;
+  color: #555;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+/* Switch alignment */
+.settings-option .MuiSwitch-root {
+  margin-left: auto;
+}

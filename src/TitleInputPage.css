@@ -1,0 +1,65 @@
+/* TitleInputPage.css */
+.title-input-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .input-group {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+    display: flex;
+  align-items: center;
+  }
+  
+  .title-input,
+  .use-case-input {
+    width: 50%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .use-case-input {
+    height: 100px;
+  }
+  
+  .tooltip-icon {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .proceed-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .proceed-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
