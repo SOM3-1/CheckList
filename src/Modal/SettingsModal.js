@@ -40,14 +40,14 @@ export const SettingsModal = ({
           />
         </div>
         <div className="settings-option">
-          <label>Capitalize All Content:</label>
+          <label>Uppercase All Content:</label>
           <Switch
             checked={capitalizeEnabled}
             onChange={onCapitalizeToggle}
           />
         </div>
         <div className="settings-option">
-          <label>Uppercase All Content:</label>
+          <label>Capitalize All Content:</label>
           <Switch
             checked={upperCaseEnabled}
             onChange={onUpperCaseToggle}
