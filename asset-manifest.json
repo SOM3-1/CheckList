@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/.github.io/CheckList/static/css/main.195b0956.css",
+    "main.js": "/.github.io/CheckList/static/js/main.ef443d10.js",
+    "index.html": "/.github.io/CheckList/index.html",
+    "main.195b0956.css.map": "/.github.io/CheckList/static/css/main.195b0956.css.map",
+    "main.ef443d10.js.map": "/.github.io/CheckList/static/js/main.ef443d10.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.195b0956.css",
+    "static/js/main.ef443d10.js"
+  ]
+}
