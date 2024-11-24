@@ -13,6 +13,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   user-select: none;
+  align-items: center
 }
 
 .checklist-item:hover {
@@ -40,7 +41,9 @@
   font-size: 16px;
   font-weight: 500;
   color: #333;
+  align-items: center; 
   flex-grow: 1;
+  margin-bottom: 0;
 }
 
 /* Checked label */

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import TitleInputPage from "./TitleInputPage";
-import Checklist from "./CheckList";
+import {CheckList} from './CheckList'
 
 const App = () => {
     const [showChecklist, setShowChecklist] = useState(false);
@@ -21,10 +21,14 @@ const App = () => {
     }, []);
 
     const handleProceed = (title, useCaseNames) => {
-        const useCaseArray = useCaseNames.split(",").map((name, index) => ({
-            id: `UC${index + 1}`,
-            name: name.trim(),
-        }));
+      const useCaseArray = useCaseNames
+      .split(",")
+      .map((name) => name.trim())
+      .filter((name) => name.length > 0)
+      .map((name, index) => ({
+        id: `UC${index + 1}`,
+        name: name,
+      }));
 
         setUseCases(useCaseArray);
         setTitle(title);
@@ -49,7 +53,7 @@ const App = () => {
     return (
         <div>
             {showChecklist ? (
-                <Checklist
+                <CheckList
                     title={title}
                     useCases={useCases}
                     onDelete={handleDelete}

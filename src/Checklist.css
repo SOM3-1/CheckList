@@ -1,5 +1,5 @@
 .checklist {
-  margin: 10px auto;
+  margin:0 auto 10px auto;
   padding: 20px;
   max-width: 600px;
   border-radius: 10px;
@@ -8,7 +8,6 @@
   gap: 4px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
 
 .checklist h2 {
@@ -19,13 +18,13 @@
 }
 
 .title {
-  margin-top:  10px;
+  margin-top:  20px;
   display: flex;
   align-self: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-style: normal;
+  font-style: bold;
 }
 
 .action-buttons {
@@ -57,17 +56,4 @@
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
-}
-
-/* Settings label styling */
-.settings-option label {
-  font-size: 16px;
-  color: #555;
-  margin-right: 20px;
-  font-weight: 500;
-}
-
-/* Switch alignment */
-.settings-option .MuiSwitch-root {
-  margin-left: auto;
 }

@@ -1,0 +1,14 @@
+
+/* Settings label styling */
+.settings-option label {
+    font-size: 16px;
+    color: #555;
+    margin-right: 20px;
+    font-weight: 500;
+  }
+  
+  /* Switch alignment */
+  .settings-option .MuiSwitch-root {
+    margin-left: auto;
+  }
+  
