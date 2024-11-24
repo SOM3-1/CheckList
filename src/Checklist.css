@@ -23,6 +23,9 @@
   display: flex;
   align-self: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .action-buttons {
